@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>com.java.com.all</artifactId>
+        <groupId>com.java</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>com.java.orm.mango</artifactId>
+
+    <properties>
+        <version.mango>1.6.1</version.mango>
+        <version.mysql.connecto.java>5.1.29</version.mysql.connecto.java>
+        <version.lombok>RELEASE</version.lombok>
+        <version.gson>2.8.5</version.gson>
+        <version.guava>23.5-jre</version.guava>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jfaster</groupId>
+            <artifactId>mango</artifactId>
+            <version>${version.mango}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${version.mysql.connecto.java}</version>
+        </dependency>
+
+        <!-- lomnok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${version.lombok}</version>
+        </dependency>
+
+        <!-- guava gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${version.gson}</version>
+        </dependency>
+
+        <!-- guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${version.guava}</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

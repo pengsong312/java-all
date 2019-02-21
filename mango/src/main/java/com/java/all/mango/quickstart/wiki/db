@@ -1,0 +1,11 @@
+# 创建数据库与数据表
+create database mango_example;
+# 使用mango_example数据库
+use mango_example;
+# 创建表
+CREATE TABLE `fruit` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `num` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

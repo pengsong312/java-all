@@ -1,4 +1,4 @@
-package com.java.all.jvm.baisc;
+package com.all.jvm.baisc;
 
 /**
  * @ClassName BooleanDemo
