@@ -10,15 +10,15 @@ package com.java.all.mango.demo;
 public class User {
 
     private int id;
-    private int userName;
-    private int password;
-    private int address;
+    private String userName;
+    private String password;
+    private String address;
     private long createTime;
 
     public User() {
     }
 
-    public User(int id, int userName, int password, int address, long createTime) {
+    public User(int id, String userName, String password, String address, long createTime) {
         this.id = id;
         this.userName = userName;
         this.password = password;
@@ -34,27 +34,27 @@ public class User {
         this.id = id;
     }
 
-    public int getUserName() {
+    public String getUserName() {
         return userName;
     }
 
-    public void setUserName(int userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    public int getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(int address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
