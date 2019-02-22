@@ -1,9 +1,11 @@
 package com.java.all.mango.demo;
 
 import com.google.gson.Gson;
+import com.java.all.mango.demo.model.User;
 import org.jfaster.mango.annotation.*;
 import org.jfaster.mango.operator.Mango;
 import org.jfaster.mango.sharding.DatabaseShardingStrategy;
+import org.jfaster.mango.sharding.ShardingStrategy;
 import org.jfaster.mango.sharding.TableShardingStrategy;
 
 import java.util.List;
@@ -47,6 +49,14 @@ public class DBAndTableZoneDemo {
     }
 
     /**
+     * 分库又分表
+     */
+    public void dbAndTableZone() {
+
+    }
+
+    /**
+     * 分库
      * 不赋值 数据源名称
      */
     @DB(table = "user")
@@ -63,6 +73,9 @@ public class DBAndTableZoneDemo {
     }
 
 
+    /**
+     * 简单分表
+     */
     @DB(name = "simple_datasource_mango_init", table = "user")
     @Sharding(tableShardingStrategy = MangoTableShardingStrategy.class)
     public interface TableDao {
@@ -72,6 +85,22 @@ public class DBAndTableZoneDemo {
 
         @SQL("select * from #table where id = :u.id")
         User query(@TableShardingBy("id") @Rename("u") User user);
+    }
+
+
+    @DB(table = "user")
+    @Sharding(databaseShardingStrategy = MangoDBShardingStrategy.class, tableShardingStrategy = MangoTableShardingStrategy.class)
+    public interface DbAndTableDao {
+        @SQL("select * from #table where id = :1")
+        User queryUserById(@DatabaseShardingBy @TableShardingBy int id);
+    }
+
+
+    @DB(table = "user")
+    @Sharding(shardingStrategy = MangoShardingStrategy.class)
+    interface Dao {
+        @SQL("select * from #table where id = :1")
+        User queryUser(@ShardingBy int id);
     }
 
 
@@ -95,5 +124,25 @@ public class DBAndTableZoneDemo {
             return "user_" + id % 2;
         }
     }
+
+
+    /**
+     * 精简分库分表策略
+     */
+    static class MangoShardingStrategy implements ShardingStrategy<Integer, Integer> {
+        @Override
+        public String getDataSourceFactoryName(Integer id) {
+            return "user_" + id % 2;
+        }
+
+        @Override
+        public String getTargetTable(String tablePrefix, Integer id) {
+            return tablePrefix.concat("_").concat(id % 3 + "");
+        }
+    }
+
+    /**
+     * 还可以实现多纬度分库分表，@Sharding 注解在方法级别，选择不同的分表分库策略
+     */
 
 }

@@ -1,4 +1,4 @@
-package com.java.all.mango.demo;
+package com.java.all.mango.demo.model;
 
 /**
  * @ClassName User
