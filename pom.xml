@@ -5,12 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.java</groupId>
-    <artifactId>com.java.com.all</artifactId>
+    <artifactId>com.java.all</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>mango</module>
         <module>base</module>
+        <module>dubbo-2.7.0</module>
     </modules>
 
     <build>

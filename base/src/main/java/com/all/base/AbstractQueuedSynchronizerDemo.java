@@ -1,4 +1,4 @@
-package com.java.all.base;
+package com.all.base;
 
 import java.util.concurrent.locks.ReentrantLock;
 
