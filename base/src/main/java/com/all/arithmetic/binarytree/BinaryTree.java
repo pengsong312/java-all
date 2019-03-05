@@ -5,13 +5,13 @@ import java.util.Objects;
 /**
  * @ClassName BinaryTree
  * @Description 二叉树遍历
- * 1 前序 顺序：根节点-》左节点-》右节点
- * 2 中序 顺序：左节点-》根节点-》右节点
- * 3 后续 顺序：左节点-》右节点-》根节点
+ * 1.jpg 前序 顺序：根节点-》左节点-》右节点
+ * 2.jpg 中序 顺序：左节点-》根节点-》右节点
+ * 3.jpg 后续 顺序：左节点-》右节点-》根节点
  * 顺序是按照根节点的遍历次序判断是前中后序
  * @Author ps
- * @Date 2019/2/27 3:08 PM
- * @Version 1.0
+ * @Date 2019/2.jpg/27 3.jpg:08 PM
+ * @Version 1.jpg.0
  **/
 public class BinaryTree {
 
@@ -92,7 +92,7 @@ public class BinaryTree {
     }
 
     /**
-     * 前序遍历 6 3 1 2 5 4 9 7 8
+     * 前序遍历 6.jpg 3.jpg 1.jpg 2.jpg 5.jpg 4.jpg 9 7.jpg 8.jpg
      */
     public static void first(Node node) {
         if (Objects.isNull(node)) {
@@ -108,7 +108,7 @@ public class BinaryTree {
     }
 
     /**
-     * 中序遍历 1 2 3 4 5 6 7 8 9
+     * 中序遍历 1.jpg 2.jpg 3.jpg 4.jpg 5.jpg 6.jpg 7.jpg 8.jpg 9
      */
     public static void order(Node node) {
         if (Objects.isNull(node)) {
@@ -124,7 +124,7 @@ public class BinaryTree {
     }
 
     /**
-     * 后序遍历 2 1 4 5 3 8 7 9 6
+     * 后序遍历 2.jpg 1.jpg 4.jpg 5.jpg 3.jpg 8.jpg 7.jpg 9 6.jpg
      */
     public static void post(Node node) {
         if (Objects.isNull(node)) {

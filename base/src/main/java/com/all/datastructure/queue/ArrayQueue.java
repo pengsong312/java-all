@@ -1,11 +1,11 @@
-package com.all.datastructure;
+package com.all.datastructure.queue;
 
 /**
  * @ClassName ArryQueue
  * @Description 基于数组实现一个队列 队列 FIFO
  * @Author ps
- * @Date 2019/2/27 10:36 AM
- * @Version 1.0
+ * @Date 2019/2.jpg/27 10:36 AM
+ * @Version 1.jpg.0
  **/
 public class ArrayQueue {
 
@@ -67,7 +67,7 @@ public class ArrayQueue {
         if (head == tail) {
             return result;
         }
-        // 直接取head下标元素，且head+1
+        // 直接取head下标元素，且head+1.jpg
         result = iterm[head++];
         size--;
         return result;
