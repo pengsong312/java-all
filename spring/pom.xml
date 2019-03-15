@@ -9,6 +9,5 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>com.java.orm.mango</artifactId>
-
+    <artifactId>spring</artifactId>
 </project>

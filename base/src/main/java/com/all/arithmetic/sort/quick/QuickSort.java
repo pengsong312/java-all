@@ -2,6 +2,8 @@ package com.all.arithmetic.sort.quick;
 
 import com.google.gson.Gson;
 
+import java.util.Random;
+
 /**
  * @ClassName QuickSort
  * @Description 快速排序：
@@ -57,12 +59,18 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
+        Random random = new Random();
+        int[] array2 = new int[10000];
+        for (int i = 0; i < 10000; i++) {
+            array2[i] = random.nextInt(10000 - 0);
+        }
         int[] array = {4, 2, 6, 5, 1, 3, 9, 7, 8, 10};
         sort(array, 0, array.length - 1);
         System.out.println("array : " + new Gson().toJson(array));
-        int[] array2 = {4, 2, 6, 5, 1, 3, 9, 7, 8, 10};
+        //        int[] array2 = {4, 2, 6, 5, 1, 3, 9, 7, 8, 10};\
+        long start = System.currentTimeMillis();
         sortRepeat(array2, 0, array2.length - 1);
-        System.out.println("array2 : " + new Gson().toJson(array2));
+        System.out.println("array2 : " + new Gson().toJson(array2) + " , costTime : " + (System.currentTimeMillis() - start));
     }
 
     /**
