@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <bean id="pojo" class="com.java.all.spring.ioc.pojo.IOCPojo">
+        <property name="id" value="10001"/>
+        <property name="applicationName" value="spring-ioc"/>
+        <property name="nodes" ref="apple"/>
+    </bean>
+
+    <bean id="apple" class="com.java.all.spring.ioc.pojo.Node">
+        <property name="item" value="apple"/>
+    </bean>
+
+    <bean id="orange" class="com.java.all.spring.ioc.pojo.Node">
+        <property name="item" value="orange"/>
+    </bean>
+
+    <bean id="banana" class="com.java.all.spring.ioc.pojo.Node" lazy-init="true" scope="singleton">
+        <property name="item" value="banana"/>
+    </bean>
+</beans>

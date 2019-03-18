@@ -10,4 +10,65 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>ioc</module>
+        <module>aop</module>
+        <module>web</module>
+    </modules>
+
+    <properties>
+        <spring-beans.version>4.2.4.RELEASE</spring-beans.version>
+        <spring-context.version>4.2.4.RELEASE</spring-context.version>
+        <spring-support.version>LATEST</spring-support.version>
+        <spring-core.version>4.2.4.RELEASE</spring-core.version>
+        <spring-web.version>4.2.4.RELEASE</spring-web.version>
+        <spring-aop.version>4.2.4.RELEASE</spring-aop.version>
+        <spring-aspects.version>4.2.4.RELEASE</spring-aspects.version>
+    </properties>
+
+    <!-- Spring 核心依赖 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring-beans.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-context.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-support</artifactId>
+            <version>${spring-support.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring-web.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring-aop.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring-aspects.version}</version>
+        </dependency>
+    </dependencies>
 </project>
