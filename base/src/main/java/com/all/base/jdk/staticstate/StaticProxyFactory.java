@@ -1,7 +1,7 @@
 package com.all.base.jdk.staticstate;
 
-import com.java.all.spring.aop.jdk.JDKProxyTargetClazz;
-import com.java.all.spring.aop.jdk.JDKProxyTargetInterface;
+import com.all.base.proxy.jdk.JDKProxyTargetClazz;
+import com.all.base.proxy.jdk.JDKProxyTargetInterface;
 
 /**
  * @ClassName StaticProxyFactory
@@ -10,7 +10,7 @@ import com.java.all.spring.aop.jdk.JDKProxyTargetInterface;
  * @Date 2019/3/15 2:35 PM
  * @Version 1.0
  **/
-public class StaticProxyFactory implements JDKProxyTargetInterface{
+public class StaticProxyFactory implements JDKProxyTargetInterface {
 
     private JDKProxyTargetClazz target;
 

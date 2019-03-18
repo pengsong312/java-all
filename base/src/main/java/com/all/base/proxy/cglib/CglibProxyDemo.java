@@ -8,7 +8,7 @@ import net.sf.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
- * @ClassName CglibProxyDemo
+ * @ClassName CglibProxyTest
  * @Description CGLIB 代理使用demo
  * @Author ps
  * @Date 2019/3/15 1:43 PM
@@ -25,11 +25,11 @@ public class CglibProxyDemo implements MethodInterceptor{
 
     @Override
     public Object intercept(Object target, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
-        System.out.println("CglibProxyDemo 方法前置");
+        System.out.println("CglibProxyTest 方法前置");
         // 调用 代理对象的
         Object object = methodProxy.invokeSuper(target,args);
         System.out.println("object : "+new Gson().toJson(object));
-        System.out.println("CglibProxyDemo 方法后置");
+        System.out.println("CglibProxyTest 方法后置");
 
         return object;
     }

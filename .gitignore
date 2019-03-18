@@ -1,3 +1,10 @@
 /.idea
 */*target/***
 */*.iml
+com.java.all.iml
+base/target/
+dubbo-2.7.0/target/
+mango/target/
+vm-demo/src/main/resources/
+vm-demo/src/test/
+vm-demo/target/

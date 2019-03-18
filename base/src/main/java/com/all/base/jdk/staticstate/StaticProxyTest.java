@@ -1,6 +1,8 @@
 package com.all.base.jdk.staticstate;
 
-import com.java.all.spring.aop.jdk.JDKProxyTargetClazz;
+import com.all.base.proxy.jdk.JDKProxyTargetClazz;
+
+import java.util.regex.Pattern;
 
 /**
  * @ClassName StaticProxyTest
@@ -10,6 +12,9 @@ import com.java.all.spring.aop.jdk.JDKProxyTargetClazz;
  * @Version 1.0
  **/
 public class StaticProxyTest {
+
+    public static Pattern USERNICK_PATTERN = Pattern.compile("(\\$\\{)(.*?)(})");
+
 
     public static void main(String[] args) {
         new StaticProxyFactory(new JDKProxyTargetClazz()).execute();

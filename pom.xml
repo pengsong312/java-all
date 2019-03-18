@@ -13,6 +13,7 @@
         <module>base</module>
         <module>dubbo-2.7.0</module>
         <module>spring</module>
+        <module>vm-demo</module>
     </modules>
 
 

@@ -1,7 +1,7 @@
 package com.all.base.jdk.dymanic;
 
-import com.java.all.spring.aop.jdk.JDKProxyTargetClazz;
-import com.java.all.spring.aop.jdk.JDKProxyTargetInterface;
+import com.all.base.proxy.jdk.JDKProxyTargetClazz;
+import com.all.base.proxy.jdk.JDKProxyTargetInterface;
 
 /**
  * @ClassName JDKProxyTest
