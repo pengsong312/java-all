@@ -17,7 +17,7 @@ public class XmlAopApplication {
     private static AopService aopService;
 
     public static void main(String[] args) {
-        context = new ClassPathXmlApplicationContext("classpath*:META-INF/spring/spring-context.xml");
+        context = new ClassPathXmlApplicationContext("classpath*:META-INF/spring-context.xml");
         aopService = (AopService) context.getBean("aopService");
 
         AopModel model = AopModel.builder().clazz("com.java.all.spring.aop.xml.XmlAopApplication").method("main").params("args").build();

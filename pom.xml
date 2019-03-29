@@ -11,9 +11,9 @@
     <modules>
         <module>mango</module>
         <module>base</module>
-        <module>dubbo-2.7.0</module>
         <module>spring</module>
         <module>vm-demo</module>
+        <module>dubbo-example</module>
     </modules>
 
 
@@ -23,39 +23,122 @@
         <version.lombok>RELEASE</version.lombok>
         <version.gson>2.8.5</version.gson>
         <version.guava>23.5-jre</version.guava>
+        <version.curator>4.2.0</version.curator>
+        <version.dubbo>2.7.0</version.dubbo>
+        <version.spring-context>5.1.5.RELEASE</version.spring-context>
+        <version.spring-beans>5.1.5.RELEASE</version.spring-beans>
+        <version.spring-context-support>5.1.5.RELEASE</version.spring-context-support>
+        <version.spring-aop>5.1.5.RELEASE</version.spring-aop>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jfaster</groupId>
+                <artifactId>mango</artifactId>
+                <version>${version.mango}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${version.mysql.connecto.java}</version>
+            </dependency>
+
+            <!-- lomnok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${version.lombok}</version>
+            </dependency>
+
+            <!-- guava gson -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${version.gson}</version>
+            </dependency>
+
+            <!-- guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${version.guava}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${version.dubbo}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${version.spring-context}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${version.spring-beans}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${version.spring-context-support}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${version.spring-aop}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${version.curator}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-client</artifactId>
+                <version>${version.curator}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${version.curator}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.jfaster</groupId>
             <artifactId>mango</artifactId>
-            <version>${version.mango}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${version.mysql.connecto.java}</version>
         </dependency>
 
         <!-- lomnok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${version.lombok}</version>
         </dependency>
 
         <!-- guava gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>${version.gson}</version>
         </dependency>
 
         <!-- guava -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>${version.guava}</version>
         </dependency>
     </dependencies>
 

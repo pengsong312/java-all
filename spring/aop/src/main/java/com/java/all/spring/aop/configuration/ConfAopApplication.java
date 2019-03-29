@@ -16,7 +16,7 @@ public class ConfAopApplication {
     private static ExecutionService executionService;
 
     public static void main(String[] args) {
-        context = new ClassPathXmlApplicationContext("classpath*:META-INF/spring/spring-context.xml");
+        context = new ClassPathXmlApplicationContext("classpath*:META-INF/spring-context.xml");
         executionService = (ExecutionService)context.getBean("executionService");
         executionService.execute();
         System.out.println("*********************************************************************");

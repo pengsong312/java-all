@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <bean id="demoService" class="com.java.all.api.impl.DemoServiceImpl" />
+
+    <dubbo:application name="java-all-dubbo-example" owner="luffy"/>
+    <dubbo:registry protocol="zookeeper" address="zookeeper://127.0.0.1:2181"/>
+    <dubbo:protocol id="dubbo" name="dubbo" port="-1" threadpool="cached" threads="500"/>
+    <dubbo:service interface="com.java.all.api.DemoService" ref="demoService" protocol="dubbo" version="1.0.0" timeout="3000" retries="0"/>
+</beans>

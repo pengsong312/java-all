@@ -22,7 +22,7 @@ public class IocApplication {
     private static IOCService iocService;
 
     public static void main(String[] args) {
-        context = new ClassPathXmlApplicationContext("classpath*:META-INF/spring/spring-context.xml");
+        context = new ClassPathXmlApplicationContext("classpath*:META-INF/spring-context.xml");
 
         pojo = (IOCPojo) context.getBean("pojo");
         System.out.println("pojo : "+new Gson().toJson(pojo));
