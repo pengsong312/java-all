@@ -14,6 +14,13 @@ public class Consumer {
     private static final Logger logger = LogManager.getLogger(Consumer.class);
 
     public static void main(String[] args) {
+
+        try {
+            Class.forName("com.yzb.omp.frigate.client.bootstrap.FrigateLoader");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:META-INF/spring/dubbo-consumer-config.xml");
         context.start();
 

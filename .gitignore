@@ -8,3 +8,4 @@ mango/target/
 vm-demo/src/main/resources/
 vm-demo/src/test/
 vm-demo/target/
+*.iml

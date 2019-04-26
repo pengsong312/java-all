@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration debug="true">
+    <appender name="log4jAppender" class="com.yzb.omp.frigate.core.filter.Log4jAppender" />
+
+    <appender name="ASYNC" class="org.apache.log4j.AsyncAppender">
+        <appender-ref ref="TEMP"/>
+        <appender-ref ref="CONSOLE"/>
+    </appender>
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%t] - %m%n"/>
+        </layout>
+    </appender>
+
+
+    <appender name="TEMP" class="org.apache.log4j.FileAppender">
+        <param name="File" value="temp"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%t] - %m%n"/>
+        </layout>
+    </appender>
+    <root>
+        <priority value="debug"/>
+        <appender-ref ref="ASYNC"/>
+        <appender-ref ref="log4jAppender"/>
+    </root>
+</log4j:configuration>

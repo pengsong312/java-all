@@ -11,12 +11,21 @@ import java.lang.reflect.Proxy;
  * @Date 2019/3/15 2:09 PM
  * @Version 1.0
  **/
-public class JDKProxyFactory<T> {
+public class JDKProxyFactory<T> implements InvocationHandler{
 
     private T target;
 
     public JDKProxyFactory(T target) {
         this.target = target;
+    }
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("cglib invoke 代理前置");
+        Object object = method.invoke(target,args);
+        System.out.println("cglib invoke 代理前置");
+
+        return object;
     }
 
     /**
