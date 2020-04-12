@@ -1,10 +1,14 @@
 package com.all.base.util;
 
+import com.google.common.collect.Maps;
 import com.google.gson.Gson;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
+import java.lang.reflect.TypeVariable;
 import java.net.*;
 import java.util.Enumeration;
+import java.util.Map;
 
 /**
  * @ClassName GetHostIpDemo
@@ -15,9 +19,26 @@ import java.util.Enumeration;
  **/
 public class GetHostIpDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException{
         //        System.out.println(GetHostIpDemo.method1());
         System.out.println(GetHostIpDemo.method2());
+        System.out.println((1 << 16) - 1);
+        Class<?> clazz = Class.forName("java.util.HashMap");
+        TypeVariable[] types = clazz.getTypeParameters();
+        for(Method method : clazz.getMethods()){
+            System.out.println(method.getParameters());
+        }
+
+        Map<String,String> map = Maps.newHashMap();
+        map.put("1","1");
+        map.put("2,","2");
+        map.put("3,","3");
+
+        Map<String,String> map1 = map;
+        map1.put("1","1.1");
+        map1.put("4","4");
+
+        System.out.println(new Gson().toJson(map));
     }
 
     public static final String method1() {

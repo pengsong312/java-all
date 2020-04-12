@@ -15,6 +15,7 @@
         <module>vm-demo</module>
         <module>dubbo-example</module>
         <module>lint-code</module>
+        <module>view</module>
     </modules>
 
 

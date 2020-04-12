@@ -9,3 +9,15 @@ vm-demo/src/main/resources/
 vm-demo/src/test/
 vm-demo/target/
 *.iml
+dubbo-example/api/api.iml
+dubbo-example/api/src/main/resources/
+dubbo-example/api/src/test/
+dubbo-example/consumer/src/test/
+dubbo-example/provider/src/test/
+lint-code/src/main/resources/
+lint-code/src/test/
+lint-code/target/
+spring/aop/src/test/
+spring/ioc/src/test/
+spring/web/core.iml
+spring/web/src/test/
